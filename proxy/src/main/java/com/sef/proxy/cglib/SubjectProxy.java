@@ -11,16 +11,29 @@ import java.lang.reflect.Method;
  */
 public class SubjectProxy implements MethodInterceptor {
 
-    public Object getInstance(Class clazz){
+    private Object target;
+
+    public Object getInstance(Object target){
+        this.target = target;
         Enhancer enhancer = new Enhancer();
-        enhancer.setSuperclass(clazz);
+        enhancer.setSuperclass(this.target.getClass());
         // 回调方法
         enhancer.setCallback(this);
         // 创建代理对象
         return enhancer.create();
     }
 
-    public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
+    public Object intercept(Object o, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
+
+        System.out.println("before rent house");
+        System.out.println("method : " + method);
+        System.out.println("methodProxy: " + methodProxy.getSignature());
+
+        // 被代理对象
+        methodProxy.invokeSuper(o,args);
+
+        System.out.println("after rent house");
+
         return null;
     }
 

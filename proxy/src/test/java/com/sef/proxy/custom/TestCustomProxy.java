@@ -1,5 +1,7 @@
-package com.sef.proxy.jdk;
+package com.sef.proxy.custom;
 
+import com.sef.proxy.jdk.RealSubject;
+import com.sef.proxy.jdk.Subject;
 import org.junit.Test;
 
 /**
