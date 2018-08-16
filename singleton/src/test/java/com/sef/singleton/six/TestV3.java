@@ -1,11 +1,13 @@
 package com.sef.singleton.six;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.lang.reflect.Constructor;
 
 public class TestV3 {
 
+    @Ignore
     @Test
     public void testReflesh(){
         Singleton instance = Singleton.getInstance();
