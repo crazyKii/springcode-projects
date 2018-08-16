@@ -11,6 +11,9 @@
         <module>proxy</module>
         <module>common-lib</module>
         <module>factory</module>
+        <module>singleton</module>
+        <module>delegate</module>
+        <module>strategy</module>
     </modules>
 
     <packaging>pom</packaging>
