@@ -17,6 +17,8 @@
         <module>prototype</module>
         <module>dapter</module>
         <module>spring-framework</module>
+        <module>decorator</module>
+        <module>observer</module>
     </modules>
 
     <packaging>pom</packaging>
